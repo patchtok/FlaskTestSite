@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Conversions
+{% endblock %}
+
+{% block content %}
+					<h1 style="text-align: center;">Converting cooking units</h1>
+					<!-- Paragraphs -->
+					<h3 style="text-align: center;">
+Often recipies will have different units like  ounces or grams or cups.<br> Here you can do some quick conversions</h3>
+
+
+<hr>
+                <script src="static/js/myScripts.js"></script>
+
+<div class="conversions">
+<input id="pounds" type="number" name="quantity" min="0" max="5" step="0.01" value="0" onchange="pConvert()"> Pounds<br>
+<input id="kilograms" type="number" name="quantity" min="0" max="5" step="0.01" value="0" onchange="kConvert()"> Kilograms</div>
+
+<div class="conversions">
+<input id="cups" type="number" name="quantity" min="0" max="5" step=0.01 value="0" onchange="convertAnyThing(240,this.value,'millilitres')"> Cups<br>
+<input id="millilitres" type="number" name="quantity" min="0" max="5000" step=0.01 value="0" onchange="convertAnyThing(1/240,this.value,'cups')">Millilitres</div>
+
+<div class="conversions">
+<input id="grams" type="number" name="quantity" min="0" max="5000" step='1' value="0" onchange="convertAnyThing(0.035274,this.value,'ounces')"> Grams<br>
+<input id="ounces" type="number" name="quantity" min="0" max="5000" step='1' value="0" onchange="convertAnyThing(28.35,this.value,'grams')"> Ounces </div>
+{% endblock %}

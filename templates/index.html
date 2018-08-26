@@ -1,7 +1,120 @@
 {% extends "layout.html" %}
 
+{% block title %}
+Recipe of the Day
+{% endblock %}
+
 {% block content %}
-<h1>Welcome </h1>
-<p> Paragraph 1</p>
-<p> Paragraph 2 </p>
+<h1 style="text-align: center;">A new recipe each day</h1>
+					<!-- Paragraphs -->
+					<h3 style="text-align: center;">Double Chocolate Muffins</h3>
+
+
+<p>These muffins are great for a filling morning or afternoon tea.
+They are fun to make and the ingredients cost $5.00, which is much cheaper and much for fun than buying them already made. The recipe makes 24 muffins so you can give them to friend or even freeze them and take a fresh one out of the freezer each day.</p>
+
+
+					<hr>
+
+					<!-- Responsive images -->
+					<h3 style="text-align: center;">Pictures of some of the steps </h3>
+					<p style="text-align: center;">Click through the images to see some of the steps of the recipe</p>
+<script>
+                function changeIm(a){
+                    document.getElementById("slide").src=a;
+                    var len=a.length;
+                    var text=a.substring(len-8);
+                    switch(text){
+                        case "yMix.jpg":
+                            document.getElementById("cap").innerHTML="Sifting in the cocoa, after flour and sugar";
+                            break;
+                        case "tter.jpg":
+                            document.getElementById("cap").innerHTML="Gently warm butter in the microwave and stir so ensure it is evenly melted";
+                            break;
+                        case "hDry.jpg":
+                           document.getElementById("cap").innerHTML="Pouring wet mixture into dry ingredients together";
+                            break;
+                        case "xing.jpg":
+                            document.getElementById("cap").innerHTML="Mix carefully and thoroughly";
+                            break;
+                        case "done.jpg":
+                            document.getElementById("cap").innerHTML="Out of the oven";
+                            break;
+                        default:
+                            console.log("not found");
+                               }
+                }
+</script>
+<p style="text-align: center;">
+<img  id="slide" class="img-responsive" src="static/images/dryMix.jpg" alt=""><br>
+    <span id="cap" >Sifting in the cocoa, after flour and sugar</span><br>
+
+<img class="img-responsiveSmall" src="static/images/dryMix.jpg" alt="" onclick="changeIm(this.src)"><img class="img-responsiveSmall" src="static/images/meltedButter.jpg" alt="" onclick="changeIm(this.src)"><img class="img-responsiveSmall" src="static/images/wetWithDry.jpg" alt="" onclick="changeIm(this.src)"><img class="img-responsiveSmall" src="static/images/mixing.jpg" alt="" onclick="changeIm(this.src)"><img class="img-responsiveSmall" src="static/images/done.jpg" alt="" onclick="changeIm(this.src)"></p>
+
+
+					<!-- Lists -->
+
+					<hr>
+                <h3> Ingredients</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>1 3/4 cups</td>
+                            <td> flour</td>
+                        </tr>
+                        <tr>
+                            <td>1 teaspoon</td>
+                            <td> baking soda</td>
+                        </tr>
+                        <tr>
+                            <td>1 cup</td>
+                            <td> sugar</td>
+                        </tr>
+                        <tr>
+                            <td>2 tablespoons</td>
+                            <td> cocoa</td>
+                        </tr>
+                        <tr>
+                            <td>100 grams </td>
+                            <td> butter</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td> egg</td>
+                        </tr>
+                        <tr>
+                            <td>1 cup</td>
+                            <td> yoghurt</td>
+                        </tr>
+                        <tr>
+                            <td>1/2 cup</td>
+                            <td>milk</td>
+                        </tr>
+                        <tr>
+                            <td>1/2 teaspoon</td>
+                            <td>vanilla</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>chocolate buttons</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+					<!-- Blockquotes -->
+					<h3>Steps</h3>
+					<p>Turn oven to 200&#8451</p>
+					<blockquote>
+                        <p>Sift the dry ingredients into a large bowl</p>
+                       <p>Melt the butter, add the remaining ingredients, except the chocolate chips, and mix until smooth. </p>
+                        <p>Add the combined liquids to the dry ingredients and the chocolate chips, then fold together until the flour is dampened but not smooth (i.e. don't overmix)</p>
+                        <p> Place one spoonful of the mixture into a 12 muffin pan (this should be about half the mixture)</p>
+                        <p>Then, place two chocolate buttons into the centre.</p>
+                        <p>Using the remainder of the mixture, cover the buttons, using up all of the mixture.</p>
+                        <p>Bake at 200&#8451 for 10 to 12 minutes</p>
+                        <p> Cool on a wire rack.</p>
+
+					</blockquote>
+					<hr>
+
 {% endblock %}

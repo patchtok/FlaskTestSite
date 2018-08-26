@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Layout Test</title>
+    <style>
+        body{
+            font-family: monospace;
+            font-size: 20px;
+        }
+        .content{
+        outline: 1px solid red;
+        outline-offset: 1px;
+        width: 600px;
+        margin:auto;
+        padding: 0px;
+        }
+        input{
+            font-family: monospace;
+            font-size: 20px;
+            width:100%;
+        }
+        #message{
+            width:100%;
+            height: 100px;
+        }
+        .formtable{
+            width: 100%;
+            border-collapse: collapse;
+            padding:0;
+        }
+        .formtable tr{
+            padding:0;
+            margin-top: 10px;
+            
+        }
+        .formtable td{
+            padding-top:10px;
+            
+        }
+        
+    </style>
+    <script>
+        function myForm(a){
+            
+            
+        }
+        function updateBox(a){
+            a.value="";
+            a.style.color="blue";  
+        }
+
+    </script>
+
+</head>
+<body>
+<ul class="nav-bar">
+    <li><a href="/"> Home</a></li>
+    <li><a href="/nextpage">Page 1</a></li>
+    <li>Page 2</li>
+</ul>
+<div class="content">
+<form onsubmit="myForm(this)">
+    <table class="formtable">
+    <tr>
+        <td>First Name:</td>
+        <td><input id="firstname" type="text" value="Please enter your first name" 
+                   onfocus="updateBox(this)">
+        </td></tr>
+        <tr>
+        <td>Second Name:</td>
+        <td><input id="secondname" type="text" value="Please enter your first name" 
+                   onfocus="updateBox(this)">
+        </td></tr>
+        <tr><td colspan="2">
+            <textarea id="message">Write your message here</textarea>
+            </td> </tr>
+        <tr><td></td>
+        <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+    </form>
+</div>
+
+
+</body>
+</html>
